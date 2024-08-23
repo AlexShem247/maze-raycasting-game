@@ -1,0 +1,120 @@
+package com.raycaster.game.borders;
+
+import com.raycaster.game.items.Coin;
+import com.raycaster.game.items.Item;
+import com.raycaster.game.screens.PlayScreen;
+import com.raycaster.game.sprite.Enemy;
+import com.raycaster.game.sprite.Enemy1;
+import com.raycaster.game.sprite.Enemy2;
+
+public class BorderVals {
+
+  private final Border[] shapes;
+  private final Enemy[] enemies;
+  private final Item[] items;
+
+  public BorderVals(PlayScreen screen) {
+    // Create Shapes for Game Map
+    RectBorder topLeftRect1 = new RectBorder(121, 113, 239, 24);
+
+    RectBorder topRect1 = new RectBorder(0, 0, 960, 24);
+    RectBorder topRect2 = new RectBorder(454, 24, 60, 195);
+
+    RectBorder leftRect1 = new RectBorder(0, 24, 24, 696);
+    RectBorder leftRect2 = new RectBorder(210, 253, 161, 20);
+    RectBorder leftRect3 = new RectBorder(210, 273, 21, 258);
+    RectBorder leftRect4 = new RectBorder(299, 357, 41, 80);
+
+    RectBorder centreRect1 = new RectBorder(540, 429, 139, 23);
+
+    RectBorder rightRect1 = new RectBorder(934, 24, 26, 696);
+    RectBorder rightRect2 = new RectBorder(584, 326, 221, 24);
+    RectBorder rightRect3 = new RectBorder(901, 326, 33, 24);
+    RectBorder rightRect4 = new RectBorder(778, 350, 27, 208);
+
+    RectBorder bottomLeftRect1 = new RectBorder(92, 513, 118, 18);
+    RectBorder bottomLeftRect2 = new RectBorder(231, 513, 139, 18);
+    RectBorder bottomLeftRect3 = new RectBorder(24, 610, 176, 19);
+    RectBorder bottomLeftRect4 = new RectBorder(24, 694, 300, 26);
+
+    RectBorder bottomRect1 = new RectBorder(577, 452, 23, 92);
+    RectBorder bottomRect2 = new RectBorder(462, 489, 22, 124);
+    RectBorder bottomRect3 = new RectBorder(426, 547, 36, 19);
+    RectBorder bottomRect4 = new RectBorder(484, 547, 38, 19);
+    RectBorder bottomRect5 = new RectBorder(324, 609, 33, 111);
+
+    RectBorder bottomRightRect1 = new RectBorder(695, 534, 83, 24);
+    RectBorder bottomRightRect2 = new RectBorder(805, 534, 39, 24);
+    RectBorder bottomRightRect3 = new RectBorder(357, 694, 577, 26);
+
+    CircleBorder topLeftCircle1 = new CircleBorder(121, 216, 7);
+
+    CircleBorder topRightCircle1 = new CircleBorder(727, 179, 70);
+
+    CircleBorder leftCircle1 = new CircleBorder(62, 243, 7);
+    CircleBorder leftCircle2 = new CircleBorder(106, 293, 7);
+    CircleBorder leftCircle3 = new CircleBorder(166, 305, 7);
+    CircleBorder leftCircle4 = new CircleBorder(52, 342, 7);
+    CircleBorder leftCircle5 = new CircleBorder(136, 389, 7);
+    CircleBorder leftCircle6 = new CircleBorder(61, 423, 7);
+    CircleBorder leftCircle7 = new CircleBorder(146, 473, 7);
+
+    shapes = new Border[]{topLeftRect1, topRect1, topRect2, leftRect1, leftRect2, leftRect3,
+        leftRect4, centreRect1, rightRect1, rightRect2, rightRect3, rightRect4, bottomLeftRect1,
+        bottomLeftRect2, bottomLeftRect3, bottomLeftRect4, bottomRect1, bottomRect2, bottomRect3,
+        bottomRect4, bottomRect5, bottomRightRect1, bottomRightRect2, bottomRightRect3,
+        topLeftCircle1, topRightCircle1, leftCircle1, leftCircle2, leftCircle3, leftCircle4,
+        leftCircle5, leftCircle6, leftCircle7};
+
+    // Create Enemies
+    Enemy1 topLeftEnemy11 = new Enemy1(screen, 237, 156);
+
+    Enemy1 topEnemy11 = new Enemy1(screen, 614, 233);
+
+    Enemy2 centreEnemy21 = new Enemy2(screen, 368, 473);
+
+    Enemy2 bottomLeftEnemy21 = new Enemy2(screen, 65, 577);
+
+    Enemy1 bottomEnemy11 = new Enemy1(screen, 558, 660);
+
+    Enemy2 bottomRightEnemy21 = new Enemy2(screen, 858, 629);
+
+    enemies = new Enemy[]{topLeftEnemy11, topEnemy11, centreEnemy21, bottomLeftEnemy21,
+        bottomEnemy11, bottomRightEnemy21};
+
+    // Create Items
+    Coin topLeftCoin1 = new Coin(screen, 237, 60);
+
+    Coin topRightCoin1 = new Coin(screen, 865, 103);
+
+    Coin leftCoin1 = new Coin(screen, 151, 248);
+    Coin leftCoin2 = new Coin(screen, 64, 295);
+    Coin leftCoin3 = new Coin(screen, 124, 339);
+    Coin leftCoin4 = new Coin(screen, 84, 385);
+    Coin leftCoin5 = new Coin(screen, 118, 441);
+
+    Coin centreCoin1 = new Coin(screen, 482, 250);
+
+    Coin rightCoin1 = new Coin(screen, 730, 389);
+
+    Coin bottomLeftCoin1 = new Coin(screen, 273, 571);
+    Coin bottomLeftCoin2 = new Coin(screen, 61, 674);
+
+    Coin bottomCoin1 = new Coin(screen, 522, 502);
+
+    items = new Item[]{topLeftCoin1, topRightCoin1, leftCoin1, leftCoin2, leftCoin3, leftCoin4,
+        leftCoin5, centreCoin1, rightCoin1, bottomLeftCoin1, bottomLeftCoin2, bottomCoin1};
+  }
+
+  public Border[] getShapes() {
+    return shapes;
+  }
+
+  public Enemy[] getEnemies() {
+    return enemies;
+  }
+
+  public Item[] getItems() {
+    return items;
+  }
+}
