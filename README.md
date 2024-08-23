@@ -115,10 +115,6 @@ Once the initial maze is generated, an additional step is taken to remove dead e
 
 ## Why I made the Game?
 My fascination with 2.5D graphics and the complex mathematics behind them inspired me to create this game. I’ve always been intrigued by how simple 2D elements can be transformed into immersive 3D-like environments through techniques like ray casting. Additionally, I wanted to apply and deepen my understanding of algorithms and mathematical concepts that I had previously studied. 
-## Copyright
-Here is a copyright section for the README file that acknowledges the assets used in your game:
-
----
 
 ## Copyright
 
