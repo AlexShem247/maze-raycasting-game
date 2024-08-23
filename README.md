@@ -65,18 +65,12 @@ Ray casting works by projecting rays from the player’s position into the envir
    - The intersection point tells us how far away the wall is and at what height it should be drawn on the screen.
 
 3. **Distance Calculation:**
-   - The distance from the player to the wall is calculated using the formula:
-     $$
-     d = \frac{{\text{distance to wall}}}{{\cos(\theta)}}
-     $$
+   - The distance from the player to the wall is calculated using the formula: $d = \frac{{\text{distance to wall}}}{{\cos(\theta)}}$
      where $d$ is the perpendicular distance to the wall, and $\theta$ is the angle of the ray relative to the player’s viewing direction. This correction accounts for the "fish-eye" distortion that would otherwise occur.
 
 4. **Projection:**
    - The height of the wall on the screen is inversely proportional to the distance calculated. The closer the wall, the taller it appears, and vice versa.
-   - The height $h$ of the wall slice on the screen is given by:
-     $$
-     h = \frac{{C}}{{d}}
-     $$
+   - The height $h$ of the wall slice on the screen is given by: $h = \frac{{C}}{{d}}$
      where $C$ is a constant that scales the height based on the screen resolution and the player's field of view.
 
 To learn more, see [Ray casting](https://en.wikipedia.org/wiki/Ray_casting).
